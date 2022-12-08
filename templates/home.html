@@ -1,12 +1,50 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-</head>
-<body>
-    Test Page
-</body>
-</html>
+{% extends 'base_templates/base_template.html' %}
+{% block title%}Home Page{% endblock title%}
+
+
+{% block body%}
+<div class="row">
+    <form>
+        <div class="input-field col s12">
+            <select>
+              <option value="" disabled selected>Choose your option</option>
+              <option value="1">1 BHK</option>
+              <option value="2">2 BHK</option>
+              <option value="3">3 BHK</option>
+              <option value="4">4 BHK</option>
+              <option value="5">5 BHK</option>
+              <option value="6">6 BHK</option>
+            </select>
+            <label>BHK</label>
+        </div>
+        <div class="input-field col s12">
+            <select>
+              <option value="" disabled selected>Choose your option</option>
+              <option value="1">Rajarhat</option>
+              <option value="2">Ballygunge</option>
+              <option value="3">Tollygunge</option>
+              <option value="4">Barrackpore</option>
+              <option value="5">Santragachi</option>
+              <option value="6">Dhakuria</option>
+            </select>
+            <label>Locality</label>
+        </div>
+        <div class="input-field col s12">
+          <input id="total_area" type="number" class="validate">
+          <label for="total_area">Total Area(in sq. ft)</label>
+        </div>
+        <div class="input-field col s12">
+            <input id="price_sq_ft" type="number" class="validate">
+            <label for="price_sq_ft">Price Per Sq. Ft.</label>
+        </div>
+        <a class="waves-effect waves-light btn-large">Predict</a>
+    </form>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('select');
+    M.FormSelect.init(elems);
+  });
+</script>
+{% endblock body%}
