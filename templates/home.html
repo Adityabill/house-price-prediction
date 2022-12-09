@@ -3,7 +3,7 @@
 
 
 {% block body%}
-<div class="row">
+<div class="row container">
     <form>
         <div class="input-field col s12">
             <select>
@@ -37,8 +37,14 @@
             <input id="price_sq_ft" type="number" class="validate">
             <label for="price_sq_ft">Price Per Sq. Ft.</label>
         </div>
-        <a class="waves-effect waves-light btn-large">Predict</a>
+        <div class="center">
+            <button class="waves-effect waves-light btn-large">Predict</button>
+        </div>
     </form>
+</div>
+
+<div class="container">
+  The predicted price is: 
 </div>
 
 <script>
