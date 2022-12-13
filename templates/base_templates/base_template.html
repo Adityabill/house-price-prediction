@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -9,6 +10,8 @@
 
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <link rel="stylesheet" href="{% static 'main.css'%}">
              
  
     <title>{% block title %}{% endblock title %}</title>
@@ -34,12 +37,14 @@
       <div class="container">
         <div class="row">
           <div class="col l6 s12">
-            <h5 class="white-text">Footer Content</h5>
-            <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
+            <h5 class="white-text">Disclaimer</h5>
+            <p class="grey-text text-lighten-4">This is an open-source project. So, you are welcome to make any changes or add new features into it.
+              <a href="https://github.com/Adityabill/house-price-prediction.git" target="blank">Click here</a> ro access the code and don't forget to fork the repository before working on :)
+            </p>
           </div>
           <div class="col l4 offset-l2 s12">
             <h5 class="white-text">Links</h5>
-            
+              <img src="{% static 'linkedin_icon.png'%}" height="100" width="100">
           </div>
         </div>
       </div>
